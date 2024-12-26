@@ -1,0 +1,101 @@
+.container {
+    width: 700px;
+}
+
+.list {
+    width: 620px;
+    height: 210px;
+    border: 5px solid black;
+}
+
+.left {
+    width: 400px;
+    height: 200px;
+    margin: 5px;
+    margin-right: 4px;
+    float: left;
+    border-right: 1px solid gray;
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    float: left;
+    position: relative;
+    z-index: 0;
+}
+
+.main-image {
+    top: 5px;
+    left: 5px;
+    width: 190px;
+    position: absolute;
+    z-index: 1;
+}
+
+.heart-image {
+    width: 30px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.left-head {
+    width: 90%;
+    height: 50px;
+}
+
+.profile {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    border: 2px solid black;
+    float: left;
+}
+
+.head-info {
+    height: 45px;
+    width: flex-grow;
+    float: left;
+    margin-left: 10px;
+}
+
+.id {
+    display: block;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.time {
+    display: block;
+    color: gray;
+    font-size: 15px;
+}
+
+.left-title {
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.left-content {
+    width: 90%;
+    font-size: 15px;
+    display: -webkit-box;
+    max-width: 90%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.left-footer {
+    width: 90%;
+    text-align:right;
+}
+.share{
+    width:30px;
+}
