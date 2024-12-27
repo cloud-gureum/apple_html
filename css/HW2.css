@@ -1,0 +1,19 @@
+.container{
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    margin-top:100px;
+    text-align: center;
+}
+.firstname{
+    width: 90px;
+    display: inline-block;
+}
+.lastname{
+    display: inline-block;
+    width: 90px;
+}
+
+input[type=text]{
+    width: 80px;
+}
