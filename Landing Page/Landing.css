@@ -1,0 +1,169 @@
+body, div, button, i{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.top{
+    background: linear-gradient(#6699ff,#3333cc );
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.top-text{
+    color: white;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.btn{
+    width: fit-content;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: #333333;
+    font-size: 20px;
+    border: none;
+}
+.btn:hover{
+    color: #333333;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.top-img{
+    margin-top: 100px;
+    height: 400px;
+    width: 300px;
+    margin-right: 10%;
+    text-align: center;
+}
+.top-img-iphone{
+    height: 100%;
+}
+
+.top-center{
+    flex-grow: 1;
+}
+
+.show{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.offer{
+    text-align: center;
+    background-color: #3333cc;
+    color: white;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+.offer-list{
+    display: flex;
+    justify-content: center;
+    
+}
+.offer-list-content{
+    padding: 10px;
+}
+.offer-list-content span{
+    font-size: 15px;
+}
+
+.offer-list-content i{
+    background-color: white;
+    color: #3333cc;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+.do{
+    text-align: center;
+    padding: 60px;
+}
+
+.do-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.do-content-box{
+    width: 50%;
+    position: relative;
+}
+.do-content-box img{
+    width: 100%;
+}
+.overlay-text{
+    position: absolute;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.do-content-box:hover .overlay{
+    border-color: white;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.do-content-contact{
+    padding: 50px;
+}
+.do-content-contact i{
+    background-color: #3333cc;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding-top: 10px;
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px){
+    .top-img{
+        width: 400px;
+        margin-right: 0px;
+        margin-top: 30px;
+    }
+    .top-text{
+        margin-left: 0px;
+        width: 100%;
+        padding: 30px;
+    }
+    .top{
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 630px;
+    }
+    .top-center{
+        flex-grow: 0;
+    }
+    .offer-list-content span{
+        font-size: 12px;
+    }
+    .offer-list-content h4{
+        font-size: 15px;
+    }
+}

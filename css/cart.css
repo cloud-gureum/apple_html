@@ -1,0 +1,59 @@
+div{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+
+td, th{
+    border:1px solid black;
+    vertical-align: middle;
+    text-align: right;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.container{
+    background: skyblue;
+    padding: 10px;
+}
+.buy{
+    float: right;
+    padding: 10px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+.buy:hover{
+    background-color: chocolate;
+}
+.buy:focus{
+    background-color: blue;
+}
+.buy:active{
+    background-color: red;
+    border: 2px solid black;
+}
+
+.end{
+    clear: both;
+}
+.shopping-list{
+background-color: white;
+padding: 10px;
+}
+.shopping-table{
+    color: skyblue;
+}
+.total-price{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 10px;
+}
