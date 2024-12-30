@@ -1,0 +1,18 @@
+.pseudo::first-letter{
+font-size: 30px;
+}
+progress{
+    appearance: none;
+}
+
+progress::-webkit-progress-bar{
+    appearance: none;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value{
+    appearance: none;
+    background-color: skyblue;
+    border-radius: 5px;
+}
