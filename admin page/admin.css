@@ -1,3 +1,142 @@
-body, div {
+body, div, i {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  position: relative;
+}
+
+.side {
+  width: 300px;
+  height: 100%;
+  float: left;
+  z-index: 3;
+  color: white;
+  background-color: rgba(25, 0, 116, 0.76);
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 10px;
+  position: fixed;
+  transform: translateX(-250px);
+}
+.side span {
+  font-size: 20px;
+  text-align: center;
+}
+.side i {
+  font-size: 20px;
+  margin: 5px;
+  transform: translateX(160px);
+}
+
+@keyframes sidebar {
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes sidebar-icon {
+  0% {
+    transform: translateX(160px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.side:hover {
+  animation-name: sidebar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.side:hover .side-content i {
+  animation-name: sidebar-icon;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.container {
+  padding-left: 50px;
+  width: 100%;
+  z-index: 1;
+}
+
+.dashboard {
+  display: block;
+}
+
+.card-blue {
+  width: 23%;
+  display: flex;
+  height: 200px;
+  margin: 1%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: blue 5px solid;
+}
+
+.card-green {
+  width: 23%;
+  display: flex;
+  height: 200px;
+  margin: 1%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: green 5px solid;
+}
+
+.card-red {
+  width: 23%;
+  display: flex;
+  height: 200px;
+  margin: 1%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: red 5px solid;
+}
+
+.card-yellow {
+  width: 23%;
+  display: flex;
+  height: 200px;
+  margin: 1%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: yellow 5px solid;
+}
+
+.card-left {
+  width: 50%;
+  height: 100%;
+}
+
+.card-right {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.card-right i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.cardboard {
+  display: flex;
+  width: 100%;
 }/*# sourceMappingURL=admin.css.map */

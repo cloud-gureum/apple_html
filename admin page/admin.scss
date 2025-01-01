@@ -1,4 +1,124 @@
 @use 'reset.scss';
 
+body {
+    position: relative;
+}
 
+.side {
+    width: 300px;
+    height: 100%;
+    float: left;
+    z-index: 3;
+    color: white;
+    background-color: reset.$main-color;
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 10px;
 
+    span {
+        font-size: reset.$font-basic;
+        text-align: center;
+    }
+
+    i {
+        font-size: reset.$font-basic;
+        margin: 5px;
+        transform: translateX(160px);
+    }
+
+    position: fixed;
+    transform: translateX(-250px);
+}
+
+@keyframes sidebar {
+   @include reset.sidebar-transform(-250px)
+}
+
+@keyframes sidebar-icon {
+    @include reset.sidebar-transform(160px)
+}
+
+.side:hover {
+    @include reset.basic-animation(sidebar);
+
+    .side-content i {
+        @include reset.basic-animation(sidebar-icon);
+    }
+}
+
+.container {
+    padding-left: 50px;
+    width: 100%;
+    z-index: 1;
+}
+.dashboard{
+    display: block;
+}
+
+@mixin card-color($color){
+    border-left: $color 5px solid;
+}
+
+.card-blue{
+    width: 23%;
+    display: flex;
+    height: 200px;
+    margin: 1%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px;
+    border: 1px solid rgba(0,0,0,0.5);
+    @include card-color(blue);
+}
+.card-green{
+    width: 23%;
+    display: flex;
+    height: 200px;
+    margin: 1%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px;
+    border: 1px solid rgba(0,0,0,0.5);
+    @include card-color(green);
+}
+.card-red{
+    width: 23%;
+    display: flex;
+    height: 200px;
+    margin: 1%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px;
+    border: 1px solid rgba(0,0,0,0.5);
+    @include card-color(red);
+}
+.card-yellow{
+    width: 23%;
+    display: flex;
+    height: 200px;
+    margin: 1%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px;
+    border: 1px solid rgba(0,0,0,0.5);
+    @include card-color(yellow);
+}
+.card-left{
+    width: 50%;
+    height: 100%;
+}
+.card-right{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    i{
+        position: absolute;
+        top:50%;
+        left:50%;
+    }
+}
+.cardboard{
+    display:flex;
+    width: 100%;
+}

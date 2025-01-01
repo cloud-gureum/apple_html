@@ -1,3 +1,28 @@
-body, div{
+body, div, i{
 box-sizing: border-box;
+}
+
+body{
+    margin:0 !important;
+    padding: 0 !important;
+}
+
+$main-color: rgba(25, 0, 116, 0.76);
+
+$font-basic: 20px;
+
+@mixin basic-animation($animation-name){
+    animation-name: $animation-name;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@mixin sidebar-transform($translateX){
+    0%{
+        transform: translateX($translateX);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
 }
