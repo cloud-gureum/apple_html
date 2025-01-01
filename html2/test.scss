@@ -1,76 +1,75 @@
 @use 'reset';
 
-%btn{
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-}
-
-%divdesign{
+@mixin list-default{
+    list-style: none;
     width: 200px;
-    height: 200px;
-    padding: 20px;
+    height: 50px;
+    font-size: $font-small;
 }
 
-.div-green{
-    @extend %divdesign;
-    background-color: green;
-}
-
-
-.div-red{
-    @extend %divdesign;
-    background-color: red;
-}
-
-.div-blue{
-    @extend %divdesign;
-    background-color: blue;
-}
-
-.btn-green{
-    @extend %btn;
-    color: green;
-}
-
-.btn-blue{
-    @extend %btn;
-    color: blue;
-}
-
-
-.main-bg {
-    h4 {
-        font-size: 16px;
-    }
-
-    button {
-        color: red;
+@mixin list-active{
+    &:active{
+        background-color: rgb(0, 105, 210);
+        color: white;
     }
 }
 
-
-$main-color: #2a4cb2;
-
-.background {
-    background-color: $main-color;
+@mixin box-color($color, $backgroundcolor){
+    color: $color;
+    background-color: $backgroundcolor;
+    padding: 10px;
+    border: 1px solid $color;
 }
 
-.box {
-    color: $main-color;
-    background-color: reset.$sub-color;
+$font-small: 16px;
+$font-medium: 24px;
+$font-large: 36px;
+
+.container{
+    .test-list{
+        background-color: white;
+    }
+    .list-content{
+        @include list-default();
+        border: 1px solid grey;
+    }
 }
 
-@mixin h-design($fontsize){
-    font-size: $fontsize;
-    letter-spacing: -1px;
+.active{
+    @include list-active()
 }
 
-h2{
-    @include h-design(30px)
+.alert{
+    width: 80%;
+    height: 50px;
 }
 
-h3{
-    @include h-design(20px)
+.box-green{
+    @include box-color(green, yellowgreen);
 }
 
+.box-blue{
+    @include box-color(blue, lightblue);
+}
+
+.box-yellow{
+    @include box-color(yellow, lightyellow);
+}
+
+.col-6{
+    width: 50%;
+}
+.col-4{
+    width: 33.33%;
+}
+
+.col-3{
+    width: 25%;
+}
+.row{
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}

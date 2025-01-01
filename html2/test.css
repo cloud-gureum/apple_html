@@ -6,60 +6,64 @@ div {
   box-sizing: border-box;
 }
 
-.btn-blue, .btn-green {
-  width: 100px;
-  height: 100px;
-  padding: 20px;
+.container .test-list {
+  background-color: white;
 }
-
-.div-blue, .div-red, .div-green {
+.container .list-content {
+  list-style: none;
   width: 200px;
-  height: 200px;
-  padding: 20px;
-}
-
-.div-green {
-  background-color: green;
-}
-
-.div-red {
-  background-color: red;
-}
-
-.div-blue {
-  background-color: blue;
-}
-
-.btn-green {
-  color: green;
-}
-
-.btn-blue {
-  color: blue;
-}
-
-.main-bg h4 {
+  height: 50px;
   font-size: 16px;
-}
-.main-bg button {
-  color: red;
+  border: 1px solid grey;
 }
 
-.background {
-  background-color: #2a4cb2;
+.active:active {
+  background-color: rgb(0, 105, 210);
+  color: white;
 }
 
-.box {
-  color: #2a4cb2;
-  background-color: brown;
+.alert {
+  width: 80%;
+  height: 50px;
 }
 
-h2 {
-  font-size: 30px;
-  letter-spacing: -1px;
+.box-green {
+  color: green;
+  background-color: yellowgreen;
+  padding: 10px;
+  border: 1px solid green;
 }
 
-h3 {
-  font-size: 20px;
-  letter-spacing: -1px;
+.box-blue {
+  color: blue;
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid blue;
+}
+
+.box-yellow {
+  color: yellow;
+  background-color: lightyellow;
+  padding: 10px;
+  border: 1px solid yellow;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.row {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
 }/*# sourceMappingURL=test.css.map */

@@ -1,0 +1,54 @@
+body, div{
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: 
+    "main main photo1"
+    "main main photo2"
+    "photo3 photo4 photo5";
+}
+
+.grid-container div{
+    border: 1px solid black;
+}
+
+.grid-main{
+    grid-area: main;
+}
+.grid-photo1{
+    grid-area: photo1;
+}
+
+.grid-photo2{
+    grid-area: photo2;
+}
+
+.grid-photo3{
+    grid-area: photo3;
+}
+
+.grid-photo4{
+    grid-area: photo4;
+}
+
+.grid-photo5{
+    grid-area: photo5;
+}
+
+@media screen and (max-width: 500px){
+    .grid-container{
+        grid-template-columns: 100px;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px;
+        grid-template-areas: 
+        "main"
+        "."
+        "."
+        "."
+        "."
+        ".";
+    }
+}

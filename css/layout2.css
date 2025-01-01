@@ -32,7 +32,7 @@ body {
 .main-background {
     width: 100%;
     height: 800px;
-    background-image: url(../shoes.jpg);
+    background-image: url(../img/shoes.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -95,6 +95,7 @@ i {
 
 body {
     margin: 0px;
+    position: relative;
 }
 
 .product-container i {
@@ -159,6 +160,132 @@ body {
         height: 50%;
     }
 }
+
+.ani-text{
+    text-align: center;
+}
+
+.ani-text:hover{
+    animation-name: goback;
+    animation-duration: 1s;
+}
+@keyframes goback{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+.shake-button:hover {
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+.rotating-plus{
+    font-size: 30px;
+    width: fit-content;
+}
+
+.rotating-plus:hover{
+    animation-name: rotate-plus;
+    animation-duration: 1s;
+}
+
+@keyframes rotate-plus{
+    0%{
+        transform: rotate(-25deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: scale(2) rotate(45deg);
+    }
+}
+
+
+.menu{
+    position: absolute;
+    z-index: 5;
+    width: 200px;
+    background-color: black;
+    color: white;
+    height: 100%;
+    top:0;
+    left:-100px;
+    text-align: center;
+}
+.menu-list{
+    list-style: none;
+    text-align: left;
+    transition: all 1s;
+}
+.menu-title{
+    text-align: right;
+    padding: 30px;
+    transition: all 1s;
+}
+.menu:hover{
+    animation-name:sidebar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    .menu-title{
+        text-align: center;
+    };
+    .menu-list{
+        animation-name: listorder;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        text-align: center;
+        margin-right: 35px;
+    }
+
+}
+@keyframes listorder{
+    0%{
+        transform: translateX(0)
+    }
+    25%{
+        transform: skewx(-30deg) translateX(80px)
+    }
+    100%{
+        transform: skew(none) translateX(-200px)
+    }
+}
+
+@keyframes sidebar{
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(100px)
+    }
+}
+
+
 
 @media screen and (max-width:1200px) {
     .product-content {
