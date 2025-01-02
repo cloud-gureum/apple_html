@@ -1,0 +1,138 @@
+body,
+div {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: rgb(112, 0, 127);
+  position: fixed;
+  z-index: 5;
+  left: -160px;
+  top: 0;
+  transition: all 1s;
+  color: white;
+}
+.sidebar p {
+  margin: 50px;
+}
+.sidebar i {
+  transform: translateX(120px);
+}
+
+.container {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding-left: 52px;
+  width: 100%;
+  max-width: none;
+}
+.container .dashboard h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.dashboard {
+  width: 100%;
+}
+
+.cardboard {
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+
+.card {
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 23%;
+  box-sizing: border-box;
+}
+
+.chart {
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.task {
+  width: 30%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+
+#myChart {
+  width: 100% !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
+.sidebar:hover {
+  left: 0;
+}
+.sidebar:hover i {
+  animation-name: side-icon;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier();
+}
+
+@keyframes side-icon {
+  0% {
+    transform: translateX(120px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.searchbox {
+  width: 350px;
+  transition: all 1s;
+}
+
+.searchbox:focus-within {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .cardboard {
+    flex-wrap: wrap;
+  }
+  .content {
+    flex-wrap: wrap;
+  }
+  .chart {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .task {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=admin.css.map */
